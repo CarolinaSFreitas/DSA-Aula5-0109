@@ -34,3 +34,7 @@ export const sequelize = new Sequelize('carros', 'aluno', 'senacrs', {
 1. URL: http://localhost:3000/carros
 2. Criar uma pasta pro projeto
 3. Criar as HTTP Requests básicas (GET (listagem), POST (criação do registro no banco), PUT (alterações no registro), DEL (exclusão do registro))
+
+Lembrando da coleção com as pastas dos projetos no Insomnia: 
+![image](https://github.com/CarolinaSFreitas/DSA-Aula5-0109/assets/99994934/aad26c2b-6012-4627-abec-f12f31fd3818)
+
