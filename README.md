@@ -18,6 +18,7 @@ Aula 5 de Desenvolvimento de Serviços e APIs - CARROS - 01/09
 1. Criar a pasta "database" com um arquivo chamado "conecta.js" e lá dentro inserir:
 
 ``
+
 import { Sequelize } from "sequelize";
 
 export const sequelize = new Sequelize('carros', 'aluno', 'senacrs', {
@@ -25,6 +26,7 @@ export const sequelize = new Sequelize('carros', 'aluno', 'senacrs', {
     dialect: 'mysql', /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
     port: 3306 
   });
+  
 `` 
 
 **No Insomnia**:
