@@ -45,6 +45,11 @@ export const Carro = sequelize.define('carro', {
             }
             return conteudo
         }
+    },
+    cor: {
+        type: DataTypes.STRING(16),
+        defaultValue: "Branco",
+        allowNull: false
     }
 
 }, {

@@ -66,3 +66,27 @@ export async function carroDelete(req, res) {
     }
 }
 
+//função de retornar os carros por ordem de ano em ordem desc
+export async function carroOrdem(req, res) {
+
+    try {
+        const carros = await Carro.findAll({
+            order: [
+                // Will escape title and validate DESC against a list of valid direction parameters
+                ['ano', 'DESC']
+
+            ]
+        })
+        res.status(200).json(carros)
+    } catch (error) {
+        res.status(400).send(error)
+    }
+}
+
+// função finder pra achar pela palavra chave (marca do carro)
+export async function carroOrdem(req, res) {
+
+
+
+
+}

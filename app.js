@@ -13,7 +13,7 @@ async function conecta_db() {
   try {
     await sequelize.authenticate();
     console.log('Conexão bem sucedida.');
-    await Carro.sync()              //vai ciar a tabela no banco(se nao existir já)
+    await Carro.sync({alter: true})          //vai ciar a tabela no banco(se nao existir já) e permitir alterações de campos 
     console.log("Tabela de Carros: Ok!")
   } catch (error) {
     console.error('Impossível conectar ao banco de dados:', error);
@@ -28,5 +28,4 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
   res.send('Sistema de Carros')
 })
-
 
