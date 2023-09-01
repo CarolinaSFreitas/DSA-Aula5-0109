@@ -28,9 +28,24 @@ export const Carro = sequelize.define('carro', {
         type: DataTypes.STRING(7),        
         allowNull: false,
         set(value) {
-            this.setDataValue('placa', value.toUpperCase())
+            this.setDataValue('placa', value.toUpperCase()) //vai deixar o registro em letra maiúscula
         }
     },
+    status:{
+        type: DataTypes.VIRTUAL,
+        get() {
+            const anoAtual = new Date().getFullYear()
+            let conteudo
+            if (this.ano == anoAtual){
+                conteudo = "Novo"
+            } else if (this.ano == anoAtual-1 || this.ano == anoAtual-2){
+                conteudo = "Semi-novo"
+            }else{
+                conteudo = "usado"
+            }
+            return conteudo
+        }
+    }
 
 }, {
     timestamps: false
